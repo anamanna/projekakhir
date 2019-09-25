@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Anam Anna Yang yeppo
+                    Recycle Trash
                 </div>
 
                 <div class="links">
