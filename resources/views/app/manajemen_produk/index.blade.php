@@ -93,7 +93,6 @@
                         <td>Aksesoris</td>
                         <td>Rp.3000</td>
                     </tr>
-
                     <tr>
                         <td>2</td>
                         <td>Pigura</td>
@@ -101,14 +100,12 @@
                         <td>Rp.30000</td>
                     </tr>
                     <tr>
-                    <td>3</td>
-                    <td>Cermin</td>
-                    <td>Aksesoris</td>
-                    <td>Rp.15000</td>
+                        <td>3</td>
+                        <td>Cermin</td>
+                        <td>Aksesoris</td>
+                        <td>Rp.15000</td>
                     </tr>
-
                 </table>
-
             </div>
         </div>
     </body>

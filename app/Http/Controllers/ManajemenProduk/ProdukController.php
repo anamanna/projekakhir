@@ -16,7 +16,7 @@ class ProdukController extends Controller
     public function index()
     {
 
-        return view('app.manajemen_produk.index');
+        return view('app.manajemen_produk.sidebar');
     }
 
     /**
