@@ -16,5 +16,9 @@ Route::get('/', function () {
 });
 Route::get('/index','ManajemenProduk\ProdukController@index');
 
+//MANAJEMENT SAMPAH 
+Route::get('/indexsampah','SampahController@index');
+Route::get('/createsampah','SampahController@create');
+
 Route::get('/admin','AdminController@index');
 
