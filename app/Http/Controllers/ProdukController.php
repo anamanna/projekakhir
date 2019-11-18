@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\ManajemenProduk;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Model\Index;
+use Illuminate\Support\Facades\DB;
 
 class ProdukController extends Controller
 {
@@ -15,8 +14,12 @@ class ProdukController extends Controller
      */
     public function index()
     {
-
-        return view('app.manajemen_produk.sidebar');
+        $dataProdukFromDB = DB::table('produk')->get();
+        
+        //kembalikan view ke user
+        return view('app.manajemen_produk.index',[
+        "dataProduk"      => $dataProdukFromDB
+        ]); 
     }
 
     /**
@@ -26,7 +29,7 @@ class ProdukController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.manajemen_produk.create');
     }
 
     /**

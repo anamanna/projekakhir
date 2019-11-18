@@ -1,112 +1,37 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>    
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <table border="1" cellpadding="10">
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Produk</td>
-                        <td>Jenis Produk</td>
-                        <td>Harga</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Gantungan Kunci</td>
-                        <td>Aksesoris</td>
-                        <td>Rp.3000</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pigura</td>
-                        <td>Aksesoris</td>
-                        <td>Rp.30000</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Cermin</td>
-                        <td>Aksesoris</td>
-                        <td>Rp.15000</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+<h1>Manajemen Produk</h1>
+    
+    <a href="{{url('/createproduk')}}"><button>Tambah(+)</button></a>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Gambar</th>
+            <th>Nama</th>            
+            <th>Harga</th>          
+            <th>Deskripsi</th> 
+            <th>Action</th>
+        </tr>
+        @foreach ($dataProduk as $key => $produk)
+        <tr>
+            <td>{{ $key+1 }}</td>
+            <td>{{ $produk->gambar }}</td>
+            <td>{{ $produk->nama }}</td>
+            <td>{{ $produk->harga }}</td>           
+            <td>{{ $produk->deskripsi }}</td>
+            <td>
+                <a href="{{url('/editproduk/'.$produk->id)}}"><button>Edit</button></a>
+                <a href="{{url('/destroyproduk/'.$produk->id)}}"><button>Hapus</button></a>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+</body>
 </html>

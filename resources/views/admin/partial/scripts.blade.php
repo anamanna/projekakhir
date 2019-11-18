@@ -1,27 +1,34 @@
-
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    {{-- <script src="{{ lte('/lte/plugins/jquery/jquery.min.js') }}"></script> --}}
-    <script src="{{asset('js/app.js')}}"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="{{ lte('/lte/plugins/popper/umd/popper.min.js') }}"></script>
-    <script src="{{ lte('lte/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-
-    <!-- apps -->
-    <script src="{{ asset('/assets/themes/dist/js/app.min.js') }}"></script>
-    <script src="{{ asset('/assets/themes/dist/js/app.init.js') }}"></script>
-    <script src="{{ asset('/assets/themes/dist/js/app-style-switcher.js') }}"></script>
-    
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="{{ lte('/lte/themes/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
-    <script src="{{ lte('/lte/themes/extra-libs/sparkline/sparkline.js') }}"></script>
-    <!--Wave Effects -->
-    <script src="{{ lte('/lte/themes/dist/js/waves.js') }}"></script>
-    <!--Menu sidebar -->
-    <script src="{{ lte('/lte/themes/dist/js/sidebarmenu.js') }}"></script>
-    <!--Custom JavaScript -->
-    <script src="{{ lte('/lte/themes/dist/js/custom.min.js') }}"></script>
-    <!-- Datatable Script-->
-    <script src="{{ lte('/lte/themes/extra-libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <!--This page JavaScript -->
+<!-- jQuery -->
+<script src="{{ asset ('lte/plugins/jquery/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ asset ('lte/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{{ asset ('lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ asset('lte/plugins/chart.js/Chart.min.js')}}"></script>
+<!-- Sparkline -->
+<script src="{{ asset('lte/plugins/sparklines/sparkline.js')}}"></script>
+<!-- JQVMap -->
+<script src="{{ asset('lte/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+<script src="{{ asset('lte/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{ asset('lte/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+<!-- daterangepicker -->
+<script src="{{ asset('lte/plugins/moment/moment.min.js')}}"></script>
+<script src="{{ asset('lte/plugins/daterangepicker/daterangepicker.js')}}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{ asset('lte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<!-- Summernote -->
+<script src="{{ asset('lte/plugins/summernote/summernote-bs4.min.js')}}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ asset('lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('lte/dist/js/adminlte.js')}}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ asset('lte/dist/js/pages/dashboard.js')}}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('lte/dist/js/demo.js')}}"></script>

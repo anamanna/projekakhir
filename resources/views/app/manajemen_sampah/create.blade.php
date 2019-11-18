@@ -11,22 +11,18 @@
 <h1>Form Tambah Barang</h1>
 
     
-<form action="aksisimpan.php" method="post">
+<form action="{{url('/storesampah')}}" method="post">
+{{ csrf_field() }}
         <table border="2">
             <tr>
                 <td colspan="2">
-                   <center><h3>Tambahkan Jenis Sampah</h3></center>      
+                   <center><h3>Tambahkan Data Sampah</h3></center>      
                 </td>
             </tr>
 
             <tr>
-                <td>ID</td>
-                <td><input type="number" name="id" required></td>
-            </tr>
-
-            <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" required></td>
+                <td><input type="text" name="nama" ></td>
             </tr>
 
             <tr>
@@ -44,8 +40,8 @@
                 <td><input type="text" name="gambar"></td>
             </tr>
 
-            <tr colspan="2">
-                <td><center><button>Simpan</button></center></td>
+            <tr colspan="2">                
+                <td><button type="submit" class="btn btn-success">Tambah</button></td>   
             </tr>
         </table>
     </form> 
